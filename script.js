@@ -48,3 +48,49 @@ function playRound(playerSelection, computerSelection) {
         return "Draw!!";
     }
 }
+function game() {
+    // debugger;
+    playerChoice = prompt("Let's play Rock, Paper, Scissors! Pick one option:");
+
+    if (
+        playerChoice.toLowerCase() === "rock" ||
+        playerChoice.toLowerCase() === "paper" ||
+        playerChoice.toLowerCase() === "scissors"
+    ) {
+        //
+        while (round <= 5) {
+            if (round !== 1) playerChoice = prompt("Let's play Rock, Paper, Scissors! Pick one option:");
+
+            console.log("Round " + round + " out of 5:");
+            console.log("You've picked " + playerChoice);
+            console.log(playRound(playerChoice, getComputerChoice()));
+            round++;
+        }
+
+        console.log("End of the game!");
+
+        // verify who won
+        if (playerPoints === computerPoints) {
+            console.log("You two draw with " + playerPoints + " points!");
+        } else if (playerPoints > computerPoints) {
+            console.log("You won with " + playerPoints + " points!");
+        } else {
+            console.log("The computer won with " + playerPoints + " points!");
+        }
+
+        // restart
+        resetGame();
+    } else {
+        console.log("Please pick one of the options: Rock, Paper or Scissors");
+        // restart
+        resetGame();
+    }
+}
+
+function resetGame() {
+    round = 1;
+    playerPoints = 0;
+    computerPoints = 0;
+    playerChoice = null;
+    console.log("Type game() on the console to start Rock, Paper and Scissors game!");
+}

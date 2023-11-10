@@ -75,7 +75,7 @@ function game() {
         } else if (playerPoints > computerPoints) {
             console.log("You won with " + playerPoints + " points!");
         } else {
-            console.log("The computer won with " + playerPoints + " points!");
+            console.log("The computer won with " + computerPoints + " points!");
         }
 
         // restart

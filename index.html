@@ -1,10 +1,28 @@
 <!doctype html>
 <html>
     <head>
-        <script type="text/javascript" src="script.js"></script>
+        <script type="text/javascript" src="script.js" defer></script>
+        <link rel="stylesheet" href="style.css" />
     </head>
     <body>
         <h1>Let's play!!</h1>
-        <h2>open the console and type game()!!</h2>
+        <h3>Choose an option:</h3>
+        <div>
+            <div class="options">
+                <button id="rock">🪨</button>
+                <button id="paper">📄</button>
+                <button id="scissors">✂️</button>
+            </div>
+        </div>
+        <h3>Computer chose:</h3>
+        <div>
+            <div class="options">
+                <div class="option" id="pc-rock">🪨</div>
+                <div class="option" id="pc-paper">📄</div>
+                <div class="option" id="pc-scissors">✂️</div>
+            </div>
+
+            <div class="hidden" id="message"></div>
+        </div>
     </body>
 </html>
